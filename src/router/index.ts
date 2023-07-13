@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import ErrorView from "../views/ErrorView.vue";
+import StreamingView from "../views/StreamingView.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -12,6 +13,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/error",
     name: "error",
     component: ErrorView,
+  },
+  {
+    path: "/streaming",
+    name: "streaming",
+    component: StreamingView,
   }
 ];
 
