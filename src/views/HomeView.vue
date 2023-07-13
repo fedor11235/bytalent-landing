@@ -24,7 +24,7 @@ import LogoComponent from '@/components/LogoComponent.vue'
   .home {
     height: 100vh;
     width: 100vw;
-    background-image: url(https://uploads-ssl.webflow.com/63ca27efdaa242d30f5a28f3/63d269e88e303225e441b5a0_photo_2023-01-21%2020.10.18.jpeg);
+    background-image: url(@/assets/bg.jpeg);
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
