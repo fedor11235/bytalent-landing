@@ -13,7 +13,7 @@ const routes: Array<RouteRecordRaw> = [
     component: HomeView,
   },
   {
-    path: "/error",
+    path: "/:pathMatch(.*)*",
     name: "error",
     component: ErrorView,
   },
@@ -36,7 +36,7 @@ const routes: Array<RouteRecordRaw> = [
     path: "/app",
     name: "app",
     component: AppView,
-  }
+  },
 ];
 
 const router = createRouter({

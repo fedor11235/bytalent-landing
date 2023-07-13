@@ -1,11 +1,8 @@
 <template>
-  <div class="button">
-  </div>
+  <div class="button"></div>
 </template>
 
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>
 
 <style scoped>
 .button {

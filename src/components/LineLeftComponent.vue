@@ -1,11 +1,8 @@
 <template>
-  <div class="line-left">
-  </div>
+  <div class="line-left"></div>
 </template>
 
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>
 
 <style scoped>
 .line-left {
