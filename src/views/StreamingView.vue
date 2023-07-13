@@ -21,7 +21,7 @@
   .video {
     width: 100%;
     height: 100%;
-    background-image: url(@/assets/bg-streaming.jpg);
+    background-image: url(@/assets/poster-streaming.jpg);
 
     background-size: cover;
     background-position: 50% 50%;
