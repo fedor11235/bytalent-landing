@@ -20,7 +20,7 @@ import LineLeftComponent from "@/components/LineLeftComponent.vue";
 import LogoComponent from "@/components/LogoComponent.vue";
 </script>
 
-<style>
+<style scoped>
 .home {
   height: 100vh;
   width: 100vw;

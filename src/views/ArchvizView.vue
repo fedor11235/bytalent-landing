@@ -9,7 +9,7 @@
 
 <script setup lang="ts"></script>
 
-<style>
+<style scoped>
 .archviz {
   width: 100vw;
   height: 100vh;
