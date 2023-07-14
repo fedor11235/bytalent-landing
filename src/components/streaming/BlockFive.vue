@@ -31,7 +31,7 @@
 import TestButton from "@/components/TestButton.vue";
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .block_five {
   width: 100vw;
   height: 90vh;
