@@ -13,7 +13,7 @@
   background-color: black;
   width: 100%;
   height: 55px;
-  opacity: .5;
+  opacity: 0.5;
   align-items: center;
   padding: 0 32px;
   color: white;

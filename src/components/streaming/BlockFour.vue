@@ -2,12 +2,16 @@
   <div class="block_four">
     <div class="start-project">
       <div class="start-project__title">Запустить проект</div>
-      <img class="stages_elem_next" src="@/assets/next.png" alt="example"/>
+      <img class="stages_elem_next" src="@/assets/next.png" alt="example" />
       <div class="start-project_view">
         <div class="stages_elem_title">WEB-Streaming</div>
-        <img class="stages_elem_img" src="@/assets/test.jpg" alt="example"/>
+        <img class="stages_elem_img" src="@/assets/test.jpg" alt="example" />
       </div>
-      <img class="stages_elem_next rotate" src="@/assets/next.png" alt="example"/>
+      <img
+        class="stages_elem_next rotate"
+        src="@/assets/next.png"
+        alt="example"
+      />
       <div class="start-project__title">Попробовать</div>
     </div>
   </div>
@@ -41,7 +45,7 @@
 .start-project {
   display: flex;
   column-gap: 21px;
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 8px;
   height: 220px;
   width: 90%;
@@ -49,7 +53,7 @@
   justify-content: center;
 }
 .start-project_view {
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(5px);
   height: 180px;
   width: 240px;

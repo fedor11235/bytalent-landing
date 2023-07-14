@@ -1,28 +1,22 @@
 <template>
   <div class="block">
-    <div class="block__title">ИНТЕГРАЦИЯ В СТРИМИНГ</div>
     <div class="block__cards">
       <div class="block__card block__card__one">
-        <div class="block__card__title">
-          ТЕХНИЧЕСКИЕ ОГРАНИЧЕНИЯ ДЛЯ ИНТЕГРАЦИИ
-        </div>
+        <div class="block__card__title">УСЛУГИ ВИЗУАЛИЗАЦИИ</div>
         <div class="block__card__text">
-          - Проект должен быть в виде уровней Unreal Engine 5 <br />
-          - Максимальный размер уровня: 4 ГБ <br />
-          - Количество актёров в сцене &lt; 1000 <br />
-          - Максимальный пул текстур: 3 ГБ
+          - Создание цифровых моделей согласно проекту<br />
+          - Разработка эксклюзивных дизайн-проектов<br />
+          - Фотореалистичная визуализация в реальном времени<br />
+          - Совместная работа над дизайном
         </div>
       </div>
       <div class="block__card block__card__two">
-        <div class="block__card__title">
-          СТАНДАРТИЗАЦИЯ УРОВНЯ ДЛЯ ИНТЕГРАЦИИ
-        </div>
+        <div class="block__card__title">ДЛЯ ГОТОВЫХ ДИЗАЙН ПРОЕКТОВ</div>
         <div class="block__card__text">
-          &nbsp;Наши специалисты готовы оптимизировать ваш уровень UE5, либо
-          <br />
-          провести конвертацию в UE5 из других программ <br />
-          &nbsp; &nbsp; &nbsp; AutoCad / Archicard / 3Ds Max / Lumion / Blender
-          / Maya
+          - Преобразование в цифровую недвижимость<br />
+          - Визуализация перепланировки и ремонта<br />
+          - Подготовка материалов для презентации недвижимости<br />
+          - Таймлапс декомпозиция этапов работы
         </div>
       </div>
     </div>

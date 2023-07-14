@@ -13,11 +13,6 @@ const routes: Array<RouteRecordRaw> = [
     component: HomeView,
   },
   {
-    path: "/:pathMatch(.*)*",
-    name: "error",
-    component: ErrorView,
-  },
-  {
     path: "/streaming",
     name: "streaming",
     component: StreamingView,
@@ -36,6 +31,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/app",
     name: "app",
     component: AppView,
+  },
+  {
+    path: "/:pathMatch(.*)*",
+    name: "error",
+    component: ErrorView,
   },
 ];
 
