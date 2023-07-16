@@ -1,9 +1,15 @@
 <template>
-  <div class="home">
-    <Transition>
+  <div
+    class="home"
+    :style="{backgroundImage: `url(${require(`@/assets/${homeStore.secondPage? 'bg-second' : 'bg-first'}.jpeg`)})`}"
+  >
+    <Transition name="trans">
+      <div class="blackout" v-if="blackout" />
+    </Transition>
+    <Transition name="fade">
       <PopupOrder v-if="homeStore.popupOrder" />
     </Transition>
-    <Transition>
+    <Transition name="fade">
       <div v-if="homeStore.uploadProject" @click.self="homeStore.uploadProject = false" class="order">
         <div @click="homeStore.popupOrder = true" class="order__visualization">Заказать визуализацию объекта недвижимости</div>
         <div @click="homeStore.popupOrder = true" class="order__project">Загрузить готовый дизайн-проект </div>
@@ -18,6 +24,7 @@
 </template>
 
 <script setup lang="ts">
+import { ref, watch } from 'vue'
 import HeaderComponent from "@/components/home/HeaderComponent.vue";
 import ContentComponent from "@/components/home/ContentComponent.vue";
 import FooterComponent from "@/components/home/FooterComponent.vue";
@@ -25,16 +32,33 @@ import PopupOrder from "@/components/home/PopupOrder.vue";
 import { useHomeStore } from  "@/store"
 
 const homeStore = useHomeStore()
+const blackout = ref(false)
+
+watch(
+  () => homeStore.secondPage,
+  () => {
+    blackout.value = true
+    setTimeout(() => blackout.value = false, 300)
+  }
+)
 </script>
 
 <style lang="scss" scoped>
 .home {
   height: 100vh;
   width: 100vw;
-  background-image: url(@/assets/bg.jpeg);
+  overflow: hidden;
+  background-image: url(@/assets/bg-first.jpeg);
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
+  .blackout {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    z-index: 1;
+  }
   .order {
     position: fixed;
     height: 100vh;
@@ -79,12 +103,21 @@ const homeStore = useHomeStore()
     background-color: rgba(0, 0, 0, 0.58);
   }
 }
-.v-enter-active,
-.v-leave-active {
+.fade-enter-active,
+.fade-leave-active {
   transition: opacity 0.5s ease;
 }
-.v-enter-from,
-.v-leave-to {
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.trans-enter-active,
+.trans-leave-active {
+  transition: opacity .2s ease;
+}
+.trans-enter-from,
+.trans-leave-to {
   opacity: 0;
 }
 </style>

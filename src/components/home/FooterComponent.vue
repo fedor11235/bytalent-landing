@@ -5,9 +5,10 @@
         :src="require(`@/assets/footer/${leftArrowImg}.svg`)"
         @mouseover="leftArrowHover = true"
         @mouseleave="leftArrowHover = false"
+        @click="homeStore.secondPage = !homeStore.secondPage"
         alt="left arrow"
       />
-      <div class="footer__page-one">01</div>
+      <div class="footer__page-one">{{ homeStore.secondPage? '02' : '01' }}</div>
       <div class="footer__page-up">
         <img class="footer__page-slash" src="@/assets/footer/slash.svg" alt="slash"/>
         <div class="footer__page-two">02</div>
@@ -16,6 +17,7 @@
         :src="require(`@/assets/footer/${rightArrowImg}.svg`)"
         @mouseover="rightArrowHover = true"
         @mouseleave="rightArrowHover = false"
+        @click="homeStore.secondPage = !homeStore.secondPage"
         alt="left arrow"
       />
     </div>

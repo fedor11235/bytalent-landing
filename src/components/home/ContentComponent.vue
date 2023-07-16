@@ -1,17 +1,23 @@
 <template>
   <div class="content-container">
     <div class="content">
-      <div class="content__title">Нет активных уровней</div>
-      <div class="content__text">
-        Вы можете заказать проект либозагрузить свой уровень
+      <div class="content__title">
+        {{ homeStore.secondPage? 'Новый уровень' : 'Нет активных уровней' }}
       </div>
-      <TestButton class="content__button">Заказать</TestButton>
+      <div class="content__text">
+        {{ homeStore.secondPage? 'Описание уровня' : 'Вы можете заказать проект либо загрузить свой уровень' }}
+      </div>
+      <TestButton v-if="homeStore.secondPage" class="content__button">Управление</TestButton>
+      <TestButton v-else @click="homeStore.uploadProject = true" class="content__button">Заказать</TestButton>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import TestButton from "@/components/TestButton.vue";
+import { useHomeStore } from  "@/store"
+
+const homeStore = useHomeStore()
 </script>
 
 <style lang="scss" scoped>
