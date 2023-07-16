@@ -5,6 +5,7 @@ export const useHomeStore = defineStore('home', {
     uploadProject: false,
     popupOrder: false,
     secondPage: false,
+    infoPage: false,
   })
 })
 
@@ -12,4 +13,5 @@ type HomeStore = {
   uploadProject: boolean
   popupOrder: boolean
   secondPage: boolean
+  infoPage: boolean
 }

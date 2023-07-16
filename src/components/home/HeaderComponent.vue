@@ -2,9 +2,9 @@
   <div class="header">
     <LogoComponent />
     <LineLeftComponent />
-    <ButtonComponent :url="'header/visualization.png'" :urlHover="'header/visualization-hover.png'"/>
+    <ButtonComponent :url="urlButton" :urlHover="urlButtonHover"/>
     <LineRightComponent />
-    <BurgerComponent />
+    <BurgerComponent @click="homeStore.infoPage = !homeStore.infoPage" />
   </div>
 </template>
 
@@ -14,6 +14,15 @@ import ButtonComponent from "@/components/ButtonComponent.vue";
 import LineRightComponent from "@/components/LineRightComponent.vue";
 import LineLeftComponent from "@/components/LineLeftComponent.vue";
 import LogoComponent from "@/components/LogoComponent.vue";
+import { useHomeStore } from  "@/store"
+
+const homeStore = useHomeStore()
+
+defineProps<{
+  urlButton: string
+  urlButtonHover: string
+}>()
+
 </script>
 
 <style lang="scss" scoped>

@@ -3,6 +3,9 @@
     class="home"
     :style="{backgroundImage: `url(${require(`@/assets/${homeStore.secondPage? 'bg-second' : 'bg-first'}.jpeg`)})`}"
   >
+    <Transition name="fade">
+      <InfoComponents v-if="homeStore.infoPage" />
+    </Transition>
     <Transition name="trans">
       <div class="blackout" v-if="blackout" />
     </Transition>
@@ -15,8 +18,11 @@
         <div @click="homeStore.popupOrder = true" class="order__project">Загрузить готовый дизайн-проект </div>
       </div>
     </Transition>
-    <div class="backdrop">
-      <HeaderComponent />
+    <div class="home__backdrop">
+      <HeaderComponent
+        urlButton="header/visualization.png"
+        urlButtonHover="header/visualization-hover.png"
+      />
       <ContentComponent />
       <FooterComponent />
     </div>
@@ -29,6 +35,7 @@ import HeaderComponent from "@/components/home/HeaderComponent.vue";
 import ContentComponent from "@/components/home/ContentComponent.vue";
 import FooterComponent from "@/components/home/FooterComponent.vue";
 import PopupOrder from "@/components/home/PopupOrder.vue";
+import InfoComponents from "@/components/home/InfoComponents.vue";
 import { useHomeStore } from  "@/store"
 
 const homeStore = useHomeStore()
@@ -96,7 +103,7 @@ watch(
       }
     }
   }
-  .backdrop {
+  &__backdrop {
     height: 100vh;
     width: 100vw;
     backdrop-filter: blur(7px);

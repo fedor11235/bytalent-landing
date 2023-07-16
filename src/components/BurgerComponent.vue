@@ -1,33 +1,40 @@
 <template>
-  <div class="menu">
-    <span></span>
-    <span></span>
-    <span></span>
+  <div class="menu-container">
+    <div class="menu">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts"></script>
 
-<style scoped>
-.menu {
-  cursor: pointer;
-}
+<style lang="scss" scoped>
+.menu-container {
+  height: 20px;
+  .menu {
+    cursor: pointer;
+    &:hover {
+      animation-name: animate;
+      animation-duration: .9s;
 
-span {
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-
-  background: #cdcdcd;
-  border-radius: 3px;
-
-  z-index: 1;
-
-  transform-origin: 4px 0px;
-
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
-    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+      @keyframes animate {
+        0%   {transform: scaleY(1);}
+        50%  {transform: scaleY(0);}
+        100% {transform: scaleY(1);}
+      }
+    }
+    div {
+      box-sizing: border-box;
+      width: 20px;
+      height: 1px;
+      margin-bottom: 5px;
+      background: white;
+      border-radius: 3px;
+      z-index: 1;
+      border: 1px solid white;
+    }
+  }
 }
 </style>

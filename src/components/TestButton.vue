@@ -21,5 +21,6 @@
   border: 1px solid white;
   border-radius: 8px;
   box-sizing: border-box;
+  justify-content: center;
 }
 </style>
