@@ -5,6 +5,7 @@ import StreamingView from "../views/StreamingView.vue";
 import ConnectView from "../views/ConnectView.vue";
 import ArchvizView from "../views/ArchvizView.vue";
 import AppView from "../views/AppView.vue";
+import SettingsView from "../views/SettingsView.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -36,6 +37,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/:pathMatch(.*)*",
     name: "error",
     component: ErrorView,
+  },
+  {
+    path: "/settings",
+    name: "settings",
+    component: SettingsView,
   },
 ];
 

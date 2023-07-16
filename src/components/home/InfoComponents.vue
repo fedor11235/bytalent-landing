@@ -29,7 +29,7 @@
           <div class="personal__row">+7 (933) 666-66-63</div>
           <div class="personal__row">Генеральный директор</div>
           <div class="personal__footer">
-            <TestButton class="personal__button">Настройки</TestButton>
+            <RouterLink to="/settings"><TestButton class="personal__button">Настройки</TestButton></RouterLink>
           </div>
         </div>
       </div>
@@ -254,7 +254,6 @@ const dropdown = [
       }
       &__button {
         height: 60%;
-        width: 30%;
       }
     }
     .doc {
