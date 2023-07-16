@@ -12,7 +12,9 @@
             <div class="content__access_logo"></div>
           </div>
           <TestButton>Для оффлайн демонстрации архитектуры проекта</TestButton>
-          <TestButton>Неограниченный функционал и стабильное поделючение</TestButton>
+          <TestButton
+            >Неограниченный функционал и стабильное поделючение</TestButton
+          >
           <TestButton>Совместная работа с заказчиком</TestButton>
         </div>
 
