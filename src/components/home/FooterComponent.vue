@@ -21,7 +21,7 @@
     </div>
     <div class="footer__download">
       <div>|</div>
-      <div class="footer__download_button">+ Загрузить готовый проект</div>
+      <div @click="homeStore.uploadProject = true" class="footer__download_button">+ Загрузить готовый проект</div>
       <div>|</div>
       <div>|</div>
       <div>|</div>
@@ -32,6 +32,10 @@
 
 <script setup lang="ts">
 import { ref, computed } from "vue";
+import { useHomeStore } from  "@/store"
+
+const homeStore = useHomeStore()
+
 const leftArrowHover = ref(false);
 const rightArrowHover = ref(false);
 
